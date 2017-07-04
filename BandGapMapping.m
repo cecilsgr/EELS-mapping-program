@@ -53,7 +53,7 @@ if file ~= 0
         handles.cube0 = handles.data.intensity.scale*permute(handles.cube0,[2,1,3]);
         if dim(1) > dim(2)
             disp('Reshaping data')
-            handles.cube0 = permute(handles.cube0,[2,1,3]);
+            handles.cube0 = rot90(handles.cube0,3);
         end
         dim = size(handles.cube0);
     end
